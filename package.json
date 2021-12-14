@@ -1,0 +1,27 @@
+{
+  "name": "qawebtest",
+  "version": "1.0.0",
+  "description": "To create package.json - npm init\r Install cucumber  - npm install --save-dev @cucumber/cucumber\r To install all dependency - npm install\r To create tsconfig file - tsc --init\r (Update Set-ExecutionPolicy -ExecutionPolicy RemoteSigned in power shell tsc is not recognized , ps1 loaded)",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install && webdriver-manager update && node node_modules/protractor/bin/webdriver-manager update",
+    "clean": "rimraf js-files/",
+    "test": "webdriver-manager start --detach && npm run clean && tsc && protractor ./js-files/config/config.js && webdriver-manager shutdown --detach"
+    },
+  "author": "$$$$$$$$$$$",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^7.3.1",
+    "@types/node": "^16.11.11",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "cucumber-html-reporter": "^5.5.0",
+    "mkdir": "^0.0.2",
+    "protractor": "^7.0.0",
+    "protractor-cucumber-framework": "^8.2.8",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2",
+    "webdriver-manager": "^12.1.8"
+  }
+}
